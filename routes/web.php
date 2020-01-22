@@ -11,6 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+Route::middleware(['guest', 'admin'])->group(function(){
+	Route::get('/', 'MainController@index');
 });
+*/
+
+Route::middleware('admin')->group(function(){
+	Route::get('/', 'MainController@index');
+});
+
+
+
+/*
+Route::get('/', function(){
+	abort(503);
+});
+*/
+
+
+
+Route::post( '/addcomment', 'MainController@addcomment');
+

@@ -51,8 +51,8 @@
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
-              
-				@yield('content')
+                
+				<h1>503 ОЙ ОЙ... СЕРВИС НЕДОСТУПЕН...</h1>
 
                 </div>
             </div>
