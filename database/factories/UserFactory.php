@@ -25,3 +25,12 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+$factory->define(App\Comments::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'text' => $faker->text,
+        'dt_add' => $faker->date,
+        'user_id' => factory(User::class)->create()->id
+    ];
+});
